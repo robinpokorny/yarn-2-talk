@@ -3,11 +3,45 @@ import {
   CodeSurferColumns,
   Step,
 } from "code-surfer";
-import { github, vsDark } from "@code-surfer/themes";
+import { shadesOfPurple } from "@code-surfer/themes";
 
-export const theme = vsDark;
+export const theme = shadesOfPurple;
 
 # Hello 👋
+
+---
+
+```
+├── .yarn
+│   ├── cache
+│   │   ├── gatsby-npm-2.15.29-e5a0f3df77-2.zip
+│   │   ├── react-npm-16.10.2-c551e49891-2.zip
+│   │   └── ...
+│   ├── releases
+│   │   └── yarn-berry.js *
+│   ├── unplugged
+│   └── build-state.yml
+├── .pnp.js
+├── .yarnrc.yml *
+├── package.json *
+└── yarn.lock *
+```
+
+
+---
+
+# `node_modules` ▶️ `.yarn/cache`
+# 135k ▶️ 2k
+# 1.2 GB ▶️ 139 MB
+
+---
+
+# `node index.js` ▶️ `yarn node index.js`
+
+---
+
+# Zero-Installs
+## = commiting deps
 
 ---
 
