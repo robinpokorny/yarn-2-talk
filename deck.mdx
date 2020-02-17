@@ -4,17 +4,61 @@ import {
   Step,
 } from "code-surfer";
 import { shadesOfPurple } from "@code-surfer/themes";
+import "prismjs/components/prism-prolog"
 
 export const theme = shadesOfPurple;
 
-# Hello 👋
+# 🧶 Yarn 2
+
+_by [@robinpokorny](https://robinpokorny.com)_
 
 ---
+
+* TypeScript
+* `yarn dlx` is the new `npx`
+* Plugins
+
+* **Improved workspaces**
+* **Plug'n'Play**
+
+---
+
+# Improved workspaces
+
+* `yarn add -i <name>`
+* `yarn workspaces foreach`
+* Nested workspaces
+* Workspace Constraints
+
+---
+
+<CodeSurfer>
+
+```prolog
+% constraints.pro
+
+gen_enforced_dependency(WorkspaceCwd, 'underscore', null, DependencyType) :-
+  workspace_has_dependency(WorkspaceCwd, 'underscore', _, DependencyType).
+```
+
+</CodeSurfer>
+
+---
+
+# Plug'n'Play 
+
+(PnP)
+
+---
+
+# `node_modules` are baaaad
+
+---
+
 
 ```
 ├── .yarn
 │   ├── cache
-│   │   ├── gatsby-npm-2.15.29-e5a0f3df77-2.zip
 │   │   ├── react-npm-16.10.2-c551e49891-2.zip
 │   │   └── ...
 │   ├── releases
@@ -30,13 +74,15 @@ export const theme = shadesOfPurple;
 
 ---
 
-# `node_modules` ▶️ `.yarn/cache`
-# 135k ▶️ 2k
-# 1.2 GB ▶️ 139 MB
+## `node_modules` ▶️ `.yarn/cache`
+## 135k ▶️ 2k
+## 1.2 GB ▶️ 139 MB
 
 ---
 
-# `node index.js` ▶️ `yarn node index.js`
+## `node index.js`
+## ▶️
+## `yarn node index.js`
 
 ---
 
@@ -45,12 +91,21 @@ export const theme = shadesOfPurple;
 
 ---
 
+# Flow and React Native
+
+# *NOT SUPPORTED*
+
+---
+
+## `yarn policies set-version ^1`
+
+---
+
 <br />
 
 # 👋
 
 <br />
-<br />
 
-## [@robinpokorny](https://robinpokorny.com)
-
+## _[@robinpokorny](https://robinpokorny.com)_
+### [yarn-2-talk.now.sh](https://yarn-2-talk.now.sh/)
